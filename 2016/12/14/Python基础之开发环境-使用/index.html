@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>Python基础之开发环境-使用 | 王绍辉的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="pyenv命令格式1pyenv &amp;lt;command&amp;gt; [&amp;lt;args&amp;gt;]
+pyenv命令帮助12pyenv help  #查看pyenv可用的子命令pyenv help &amp;lt;command&amp;gt;    #查看pyenv子命令的帮助
+常用命令介绍1. install12pyenv install -l|--list     #显示可通过pyenv安装python的所有可用版">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础之开发环境-使用">
+<meta property="og:url" content="http://yoursite.com/2016/12/14/Python基础之开发环境-使用/index.html">
+<meta property="og:site_name" content="王绍辉的博客">
+<meta property="og:description" content="pyenv命令格式1pyenv &amp;lt;command&amp;gt; [&amp;lt;args&amp;gt;]
+pyenv命令帮助12pyenv help  #查看pyenv可用的子命令pyenv help &amp;lt;command&amp;gt;    #查看pyenv子命令的帮助
+常用命令介绍1. install12pyenv install -l|--list     #显示可通过pyenv安装python的所有可用版">
+<meta property="og:updated_time" content="2016-12-15T13:57:49.088Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python基础之开发环境-使用">
+<meta name="twitter:description" content="pyenv命令格式1pyenv &amp;lt;command&amp;gt; [&amp;lt;args&amp;gt;]
+pyenv命令帮助12pyenv help  #查看pyenv可用的子命令pyenv help &amp;lt;command&amp;gt;    #查看pyenv子命令的帮助
+常用命令介绍1. install12pyenv install -l|--list     #显示可通过pyenv安装python的所有可用版">
+  
+    <link rel="alternative" href="/atom.xml" title="王绍辉的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/images/photo.png" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">王绍辉</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/about/">关于我</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/shwang1011" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/wshxf" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="http://zhihu.com/people/wshxf" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">王绍辉</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/images/photo.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">王绍辉</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/shwang1011" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/wshxf" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="http://zhihu.com/people/wshxf" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-Python基础之开发环境-使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python基础之开发环境-使用
+    </h1>
+  
+
+        <a href="/2016/12/14/Python基础之开发环境-使用/" class="archive-article-date">
+  	<time datetime="2016-12-14T01:39:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-14</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="pyenv命令格式"><a href="#pyenv命令格式" class="headerlink" title="pyenv命令格式"></a>pyenv命令格式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv &lt;<span class="built_in">command</span>&gt; [&lt;args&gt;]</div></pre></td></tr></table></figure>
+<h2 id="pyenv命令帮助"><a href="#pyenv命令帮助" class="headerlink" title="pyenv命令帮助"></a>pyenv命令帮助</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pyenv <span class="built_in">help</span>  <span class="comment">#查看pyenv可用的子命令</span></div><div class="line">pyenv <span class="built_in">help</span> &lt;<span class="built_in">command</span>&gt;    <span class="comment">#查看pyenv子命令的帮助</span></div></pre></td></tr></table></figure>
+<h2 id="常用命令介绍"><a href="#常用命令介绍" class="headerlink" title="常用命令介绍"></a>常用命令介绍</h2><h3 id="1-install"><a href="#1-install" class="headerlink" title="1. install"></a>1. install</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pyenv install <span class="_">-l</span>|--list     <span class="comment">#显示可通过pyenv安装python的所有可用版本</span></div><div class="line">pyenv install [<span class="_">-f</span>|--force] &lt;version&gt;    <span class="comment">#安装指定版本的python，-f|--force表示强制安装(如果已经安装了指定版本的python)</span></div></pre></td></tr></table></figure>
+<p><code>注意:</code> 安装时pyenv是从Python官网下载，速度会比较慢。我们可以将下载好的Python源码包(如：Python-3.5.2.tar.xz)放置于~/.pyenv/cache/下(如果没有cache目录，请自行创建)，再进行install安装，这就省去了从Python官网下载指定Python版本的过程。</p>
+<p>示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">pyenv install 3.5.2</div><div class="line">输出:</div><div class="line">pyenv: /root/.pyenv/versions/3.5.2 already exists</div><div class="line"><span class="built_in">continue</span> with installation? (y/N)   <span class="comment">#我已经安装过Python-3.5.2，不再往下继续安装</span></div></pre></td></tr></table></figure></p>
+<h3 id="2-uninstall"><a href="#2-uninstall" class="headerlink" title="2. uninstall"></a>2. uninstall</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv uninstall &lt;version&gt;</div></pre></td></tr></table></figure>
+<p>卸载指定版本的python</p>
+<h3 id="3-local"><a href="#3-local" class="headerlink" title="3. local"></a>3. local</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv <span class="built_in">local</span> &lt;version&gt;</div></pre></td></tr></table></figure>
+<p>切换当前目录及其子目录使用指定的Python版本。</p>
+<p>示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">mkdir py3.5.2   <span class="comment">#创建py3.5.2目录</span></div><div class="line"><span class="built_in">cd</span> py3.5.2      <span class="comment">#切换至3.5.2目录</span></div><div class="line">pyenv <span class="built_in">local</span> 3.5.2   <span class="comment">#是当前目录python版本为3.5.2</span></div><div class="line">python -V       <span class="comment">#查看当前目录的python版本</span></div><div class="line">输出:</div><div class="line">Python 3.5.2</div><div class="line">pip -V      <span class="comment">#查看当前目录的pip版本</span></div><div class="line">输出:</div><div class="line">pip 8.1.1 from /root/.pyenv/versions/3.5.2/lib/python3.5/site-packages (python 3.5)</div><div class="line">mkdir <span class="built_in">test</span>      <span class="comment">#在py3.5.2目录下创建子目录，名为test</span></div><div class="line"><span class="built_in">cd</span> <span class="built_in">test</span>/        <span class="comment">#切换至test目录</span></div><div class="line">python -V       <span class="comment">#查看test目录的python版本</span></div><div class="line">输出:</div><div class="line">Python 3.5.2</div></pre></td></tr></table></figure></p>
+<h3 id="4-version"><a href="#4-version" class="headerlink" title="4. version"></a>4. version</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv version</div></pre></td></tr></table></figure>
+<p>查看当前选择的python版本。</p>
+<p>示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pyenv version</div><div class="line">输出:</div><div class="line">3.5.2 (<span class="built_in">set</span> by /root/py3.5.2/.python-version)</div></pre></td></tr></table></figure></p>
+<h3 id="5-versions"><a href="#5-versions" class="headerlink" title="5. versions"></a>5. versions</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv versions</div></pre></td></tr></table></figure>
+<p>查看所有在<code>$PYENV_ROOT/versions/*</code>下的python版本</p>
+<p>示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pyenv versions</div><div class="line">  system</div><div class="line">* 3.5.2 (<span class="built_in">set</span> by /root/py3.5.2/.python-version)</div><div class="line">  3.5.2/envs/shwang</div><div class="line">  shwang</div></pre></td></tr></table></figure></p>
+<p><code>说明:</code><br>1.<code>*</code> 表示当前目录使用的python版本<br>2.<code>system</code> 表示系统自带的python版本</p>
+<h3 id="6-commands"><a href="#6-commands" class="headerlink" title="6. commands"></a>6. commands</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv commands</div></pre></td></tr></table></figure>
+<p>显示所有pyenv命令。</p>
+<h3 id="7-virtualenv"><a href="#7-virtualenv" class="headerlink" title="7. virtualenv"></a>7. virtualenv</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv virtualenv [version] &lt;virtualenv-name&gt;</div></pre></td></tr></table></figure>
+<p>基于指定version创建python虚拟环境。<br>用途：通过创建独立Python开发环境的工具,来解决依赖、版本以及间接权限<br>问题。<a href="http://www.jianshu.com/p/08c657bd34f1" target="_blank" rel="external">引用自 简书</a></p>
+<p>示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> py3.5.2/     <span class="comment">#切换至py3.5.2目录</span></div><div class="line">pyenv virtualenv 3.5.2 venv3.5.2    <span class="comment">#基于python3.5.2创建名为venv3.5.2的虚拟环境</span></div><div class="line">输出:</div><div class="line">Ignoring indexes: https://pypi.python.org/simple</div><div class="line">Requirement already satisfied (use --upgrade to upgrade): setuptools <span class="keyword">in</span> /root/.pyenv/versions/3.5.2/envs/venv3.5.2/lib/python3.5/site-packages</div><div class="line">Requirement already satisfied (use --upgrade to upgrade): pip <span class="keyword">in</span> /root/.pyenv/versions/3.5.2/envs/venv3.5.2/lib/python3.5/site-packages</div><div class="line">pyenv <span class="built_in">local</span> venv3.5.2</div><div class="line">(venv3.5.2) [root@localhost py3.5.2]<span class="comment"># pyenv local venv3.5.2</span></div><div class="line">pyenv version</div><div class="line">输出:</div><div class="line">venv3.5.2 (<span class="built_in">set</span> by /root/py3.5.2/.python-version)</div><div class="line">pip install jupyter     <span class="comment">#安装jupyter</span></div><div class="line">ls /root/.pyenv/versions/venv3.5.2/bin/jupyter* <span class="comment">#在该目录下生成jupyter相关的二进制命令</span></div><div class="line">ls /root/.pyenv/versions/3.5.2/bin/     <span class="comment">#在该目录下没有和jupyter相关的命令</span></div></pre></td></tr></table></figure></p>
+<p><code>注</code> 更改pip使用的镜像源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">cat ~/.pip/pip.conf</div><div class="line">[global]</div><div class="line"><span class="comment">#阿里云</span></div><div class="line">  index-url = http://mirrors.aliyun.com/pypi/simple/</div><div class="line"><span class="comment">#豆瓣</span></div><div class="line"><span class="comment"># index-url = http://pypi.doubanio.com/simple/</span></div><div class="line"><span class="comment">#清华</span></div><div class="line"><span class="comment"># index-url = http://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/</span></div><div class="line">  trusted-host = mirrors.aliyun.com</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/14/Python基础之开发环境-使用/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/14/1-1变量与命名规则/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          1.1变量与命名规则
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/18/Python基础之开发环境-安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python基础之开发环境-安装</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 王绍辉
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Python</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://my.oschina.net/forlinux/blog" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>1.我的开源中国博客</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>1.1变量与命名规则 | 王绍辉的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.1.1 变量Python是一种强类型动态语言。
+
+
+强类型：Python中所有的变量都有数据类型
+动态：Python中变量的数据类型可以改变
+
+
+Python没有严格意义上的常量，都是可变的，可以随意改变数据类型。
+示例：123456789101112131415161718In [19]: foo = 1In [20]: type(foo)Out[20]: intIn [21]: foo =">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.1变量与命名规则">
+<meta property="og:url" content="http://yoursite.com/2016/12/14/1-1变量与命名规则/index.html">
+<meta property="og:site_name" content="王绍辉的博客">
+<meta property="og:description" content="1.1.1 变量Python是一种强类型动态语言。
+
+
+强类型：Python中所有的变量都有数据类型
+动态：Python中变量的数据类型可以改变
+
+
+Python没有严格意义上的常量，都是可变的，可以随意改变数据类型。
+示例：123456789101112131415161718In [19]: foo = 1In [20]: type(foo)Out[20]: intIn [21]: foo =">
+<meta property="og:updated_time" content="2016-12-15T13:58:45.567Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1.1变量与命名规则">
+<meta name="twitter:description" content="1.1.1 变量Python是一种强类型动态语言。
+
+
+强类型：Python中所有的变量都有数据类型
+动态：Python中变量的数据类型可以改变
+
+
+Python没有严格意义上的常量，都是可变的，可以随意改变数据类型。
+示例：123456789101112131415161718In [19]: foo = 1In [20]: type(foo)Out[20]: intIn [21]: foo =">
+  
+    <link rel="alternative" href="/atom.xml" title="王绍辉的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/images/photo.png" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">王绍辉</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/about/">关于我</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/shwang1011" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/wshxf" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="http://zhihu.com/people/wshxf" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">王绍辉</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/images/photo.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">王绍辉</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/shwang1011" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/wshxf" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="http://zhihu.com/people/wshxf" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-1-1变量与命名规则" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      1.1变量与命名规则
+    </h1>
+  
+
+        <a href="/2016/12/14/1-1变量与命名规则/" class="archive-article-date">
+  	<time datetime="2016-12-14T06:26:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-14</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-1-1-变量"><a href="#1-1-1-变量" class="headerlink" title="1.1.1 变量"></a>1.1.1 变量</h2><p>Python是一种强类型动态语言。</p>
+<blockquote>
+<ul>
+<li>强类型：Python中所有的变量都有数据类型</li>
+<li>动态：Python中变量的数据类型可以改变</li>
+</ul>
+</blockquote>
+<p>Python没有严格意义上的常量，都是可变的，可以随意改变数据类型。</p>
+<p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">19</span>]: foo = <span class="number">1</span></div><div class="line">In [<span class="number">20</span>]: type(foo)</div><div class="line">Out[<span class="number">20</span>]: int</div><div class="line">In [<span class="number">21</span>]: foo = <span class="number">3.1415926</span></div><div class="line">In [<span class="number">22</span>]: type(foo)</div><div class="line">Out[<span class="number">22</span>]: float</div><div class="line">In [<span class="number">23</span>]: foo = <span class="string">'helloworld'</span></div><div class="line">In [<span class="number">24</span>]: type(foo)</div><div class="line">Out[<span class="number">24</span>]: str</div><div class="line">In [<span class="number">25</span>]: foo = <span class="keyword">True</span></div><div class="line">In [<span class="number">26</span>]: type(foo)</div><div class="line">Out[<span class="number">26</span>]: bool</div><div class="line">In [<span class="number">27</span>]: foo = <span class="keyword">None</span></div><div class="line">In [<span class="number">28</span>]: type(foo)</div><div class="line">Out[<span class="number">28</span>]: NoneType</div><div class="line">In [<span class="number">31</span>]: lst = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">In [<span class="number">32</span>]: type(lst)</div><div class="line">Out[<span class="number">32</span>]: list</div></pre></td></tr></table></figure></p>
+<p><code>注</code> type()用来查看对象的数据类型</p>
+<h2 id="1-1-2-理解”对象引用”"><a href="#1-1-2-理解”对象引用”" class="headerlink" title="1.1.2 理解”对象引用”"></a>1.1.2 理解”对象引用”</h2><p>Python将所有数据存储为内存对象，而变量就是在程序中用来指向这些内存对象的，对变量赋值就是将一个变量指向一个内存对象的过程，这个过程称为”对象引用”。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">foo = <span class="string">'ABC'</span></div></pre></td></tr></table></figure>
+<p>当我们运行上面这段程序是，Python解释器其实做了这些事情：</p>
+<ol>
+<li>创建一个字符串类型的内存对象，存储为’ABC’</li>
+<li>创建一个名为foo的变量，并指向’ABC’这个内存对象</li>
+</ol>
+<p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">33</span>]: a = <span class="string">'ABC'</span></div><div class="line">In [<span class="number">34</span>]: b = a</div><div class="line">In [<span class="number">35</span>]: a = <span class="string">'XYZ'</span></div><div class="line">In [<span class="number">36</span>]: print(a)</div><div class="line">XYZ</div><div class="line">In [<span class="number">37</span>]: print(b)</div><div class="line">ABC</div></pre></td></tr></table></figure></p>
+<p>过程理解：</p>
+<p><code>a = &#39;ABC&#39;：</code><br>a -指向-&gt; ‘ABC’</p>
+<p><code>b = a：</code><br>a -指向-&gt; ‘ABC’<br>b -指向-&gt; ‘ABC’</p>
+<p><code>a = &#39;XYZ&#39;：</code><br>a -指向-&gt; ‘XYZ’<br>b -指向-&gt; ‘ABC’</p>
+<h2 id="1-1-3-变量命名规则"><a href="#1-1-3-变量命名规则" class="headerlink" title="1.1.3 变量命名规则"></a>1.1.3 变量命名规则</h2><blockquote>
+<ul>
+<li>变量名只能包含<code>字母</code>、<code>数字</code>和<code>下划线(_)</code></li>
+<li>变量名只能以<code>字母</code>或<code>下划线(_)</code>开头</li>
+<li>变量名不能是Python解释器中的保留字</li>
+</ul>
+</blockquote>
+<p>更详细的命名规则，可参照Python的<a href="http://my.oschina.net/u/1433482/blog/464444?p=1#OSC_h2_18" target="_blank" rel="external">PEP8规范</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/14/1-1变量与命名规则/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/14/1-2运算符/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          1.2运算符
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/14/Python基础之开发环境-使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python基础之开发环境-使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 王绍辉
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Python</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://my.oschina.net/forlinux/blog" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>1.我的开源中国博客</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
