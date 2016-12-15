@@ -335,27 +335,9 @@
 <p>Python没有严格意义上的常量，都是可变的，可以随意改变数据类型。</p>
 <p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">19</span>]: foo = <span class="number">1</span></div><div class="line">In [<span class="number">20</span>]: type(foo)</div><div class="line">Out[<span class="number">20</span>]: int</div><div class="line">In [<span class="number">21</span>]: foo = <span class="number">3.1415926</span></div><div class="line">In [<span class="number">22</span>]: type(foo)</div><div class="line">Out[<span class="number">22</span>]: float</div><div class="line">In [<span class="number">23</span>]: foo = <span class="string">'helloworld'</span></div><div class="line">In [<span class="number">24</span>]: type(foo)</div><div class="line">Out[<span class="number">24</span>]: str</div><div class="line">In [<span class="number">25</span>]: foo = <span class="keyword">True</span></div><div class="line">In [<span class="number">26</span>]: type(foo)</div><div class="line">Out[<span class="number">26</span>]: bool</div><div class="line">In [<span class="number">27</span>]: foo = <span class="keyword">None</span></div><div class="line">In [<span class="number">28</span>]: type(foo)</div><div class="line">Out[<span class="number">28</span>]: NoneType</div><div class="line">In [<span class="number">31</span>]: lst = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">In [<span class="number">32</span>]: type(lst)</div><div class="line">Out[<span class="number">32</span>]: list</div></pre></td></tr></table></figure></p>
 <p><code>注</code> type()用来查看对象的数据类型</p>
-<h2 id="1-1-2-理解”对象引用”"><a href="#1-1-2-理解”对象引用”" class="headerlink" title="1.1.2 理解”对象引用”"></a>1.1.2 理解”对象引用”</h2><p>Python将所有数据存储为内存对象，而变量就是在程序中用来指向这些内存对象的，对变量赋值就是将一个变量指向一个内存对象的过程，这个过程称为”对象引用”。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">foo = <span class="string">'ABC'</span></div></pre></td></tr></table></figure>
-<p>当我们运行上面这段程序是，Python解释器其实做了这些事情：</p>
-<ol>
-<li>创建一个字符串类型的内存对象，存储为’ABC’</li>
-<li>创建一个名为foo的变量，并指向’ABC’这个内存对象</li>
-</ol>
-<p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">33</span>]: a = <span class="string">'ABC'</span></div><div class="line">In [<span class="number">34</span>]: b = a</div><div class="line">In [<span class="number">35</span>]: a = <span class="string">'XYZ'</span></div><div class="line">In [<span class="number">36</span>]: print(a)</div><div class="line">XYZ</div><div class="line">In [<span class="number">37</span>]: print(b)</div><div class="line">ABC</div></pre></td></tr></table></figure></p>
-<p>过程理解：</p>
-<p><code>a = &#39;ABC&#39;：</code><br>a -指向-&gt; ‘ABC’</p>
-<p><code>b = a：</code><br>a -指向-&gt; ‘ABC’<br>b -指向-&gt; ‘ABC’</p>
-<p><code>a = &#39;XYZ&#39;：</code><br>a -指向-&gt; ‘XYZ’<br>b -指向-&gt; ‘ABC’</p>
-<h2 id="1-1-3-变量命名规则"><a href="#1-1-3-变量命名规则" class="headerlink" title="1.1.3 变量命名规则"></a>1.1.3 变量命名规则</h2><blockquote>
-<ul>
-<li>变量名只能包含<code>字母</code>、<code>数字</code>和<code>下划线(_)</code></li>
-<li>变量名只能以<code>字母</code>或<code>下划线(_)</code>开头</li>
-<li>变量名不能是Python解释器中的保留字</li>
-</ul>
-</blockquote>
-<p>更详细的命名规则，可参照Python的<a href="http://my.oschina.net/u/1433482/blog/464444?p=1#OSC_h2_18" target="_blank" rel="external">PEP8规范</a></p>
-
+        
+          <a class="article-more-a" href="/2016/12/14/1-1变量与命名规则/#more">more >></a>
+        
       
 
       

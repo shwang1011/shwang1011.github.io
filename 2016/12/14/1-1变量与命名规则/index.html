@@ -30,7 +30,7 @@ Python没有严格意义上的常量，都是可变的，可以随意改变数�
 
 Python没有严格意义上的常量，都是可变的，可以随意改变数据类型。
 示例：123456789101112131415161718In [19]: foo = 1In [20]: type(foo)Out[20]: intIn [21]: foo =">
-<meta property="og:updated_time" content="2016-12-15T15:15:13.648Z">
+<meta property="og:updated_time" content="2016-12-15T15:25:50.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.1变量与命名规则">
 <meta name="twitter:description" content="1.1.1 变量Python是一种强类型动态语言。
@@ -186,6 +186,7 @@ Python没有严格意义上的常量，都是可变的，可以随意改变数�
 <p>Python没有严格意义上的常量，都是可变的，可以随意改变数据类型。</p>
 <p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">19</span>]: foo = <span class="number">1</span></div><div class="line">In [<span class="number">20</span>]: type(foo)</div><div class="line">Out[<span class="number">20</span>]: int</div><div class="line">In [<span class="number">21</span>]: foo = <span class="number">3.1415926</span></div><div class="line">In [<span class="number">22</span>]: type(foo)</div><div class="line">Out[<span class="number">22</span>]: float</div><div class="line">In [<span class="number">23</span>]: foo = <span class="string">'helloworld'</span></div><div class="line">In [<span class="number">24</span>]: type(foo)</div><div class="line">Out[<span class="number">24</span>]: str</div><div class="line">In [<span class="number">25</span>]: foo = <span class="keyword">True</span></div><div class="line">In [<span class="number">26</span>]: type(foo)</div><div class="line">Out[<span class="number">26</span>]: bool</div><div class="line">In [<span class="number">27</span>]: foo = <span class="keyword">None</span></div><div class="line">In [<span class="number">28</span>]: type(foo)</div><div class="line">Out[<span class="number">28</span>]: NoneType</div><div class="line">In [<span class="number">31</span>]: lst = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">In [<span class="number">32</span>]: type(lst)</div><div class="line">Out[<span class="number">32</span>]: list</div></pre></td></tr></table></figure></p>
 <p><code>注</code> type()用来查看对象的数据类型</p>
+<a id="more"></a>
 <h2 id="1-1-2-理解”对象引用”"><a href="#1-1-2-理解”对象引用”" class="headerlink" title="1.1.2 理解”对象引用”"></a>1.1.2 理解”对象引用”</h2><p>Python将所有数据存储为内存对象，而变量就是在程序中用来指向这些内存对象的，对变量赋值就是将一个变量指向一个内存对象的过程，这个过程称为”对象引用”。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">foo = <span class="string">'ABC'</span></div></pre></td></tr></table></figure>
 <p>当我们运行上面这段程序是，Python解释器其实做了这些事情：</p>
