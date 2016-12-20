@@ -167,20 +167,9 @@
 </blockquote>
 <p><code>=</code> 的典型用例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location = / &#123;</div><div class="line">    ....</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>如果请求<code>/</code>非常频繁，使用上面的配置会加快处理速度，因为执行完#2步就完成了匹配。</p>
-<h2 id="Return"><a href="#Return" class="headerlink" title="Return"></a>Return</h2><p>返回指定状态码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location /wront/url &#123;</div><div class="line">    <span class="built_in">return</span> 404;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>return指令的第一个参数是<code>响应状态码</code>，第二个可选参数可以是重定向的RUL(for code 301,302,303 and 307)或者一段文本，如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location /permanently/moved/url &#123;</div><div class="line">    <span class="built_in">return</span> 301 http://www.example.com/moved/url;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="Rewrite"><a href="#Rewrite" class="headerlink" title="Rewrite"></a>Rewrite</h2><p>一个请求的RUI可以被rewrite指令重写多次。<br>rewrite指令有两个必选参数和一个可选参数：</p>
-<blockquote>
-<ul>
-<li>regular expression（必选，匹配URI的正则表达式）</li>
-<li>第二个必选参数是URI，用来替代匹配到的URI</li>
-<li>可选参数是一个标志，此标志可以停止rewrite指令的下一步操作或者发送一个redirect状态码301或302</li>
-</ul>
-</blockquote>
-<p>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    ...</div><div class="line">    rewrite ^(/download/.*)/media/(.*)\..*$ <span class="variable">$1</span>/mp3/<span class="variable">$2</span>.mp3 last;</div><div class="line">    rewrite ^(/download/.*)/audio/(.*)\..*$ <span class="variable">$1</span>/mp3/<span class="variable">$2</span>.ra  last;</div><div class="line">    <span class="built_in">return</span>  403;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>根据上面的举例，/download/some/media/file被重写为/download/some/mp3/file.mp3，而后使用/download/some/mp3/file.mp3重新发起请求，第二个rewrite和return被跳过。/download/some/audio/file被重写为/download/some/mp3/file.ra，，而后使用/download/some/mp3/file.ra重新发起请求，return被跳过。如果URI没有被任何rewrite规则匹配到，nginx将返回403错误。</p>
-<p>rewrite标志：<br><code>空</code>:一旦被当前规则匹配并重写后，继续检查后续其它的rewrite规则，直至最后一条，而后使用重写后的URI重新发起请求<br><code>last</code>：一旦被当前规则匹配并重写后，立即停止检查后续其它的rewrite规则，而后通过重写后的URI重新发起请求<br><code>break</code>：一旦被当前规则匹配并重写后，立即停止检查后续其它的rewrite规则，而后继续由nginx进行后续操作<br><code>redirect</code>：返回302临时重定向状态码<br><code>permanent</code>：返回301永久重定向状态码</p>
-
+        
+          <a class="article-more-a" href="/2016/12/20/Nginx配置/#more">more >></a>
+        
       
 
       

@@ -32,7 +32,7 @@ regular expressions（正则表达式匹配）
 
 
 `：">
-<meta property="og:updated_time" content="2016-12-20T13:04:47.285Z">
+<meta property="og:updated_time" content="2016-12-20T13:05:48.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx配置">
 <meta name="twitter:description" content="Locationnginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。
@@ -196,6 +196,7 @@ regular expressions（正则表达式匹配）
 </blockquote>
 <p><code>=</code> 的典型用例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location = / &#123;</div><div class="line">    ....</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>如果请求<code>/</code>非常频繁，使用上面的配置会加快处理速度，因为执行完#2步就完成了匹配。</p>
+<a id="more"></a>
 <h2 id="Return"><a href="#Return" class="headerlink" title="Return"></a>Return</h2><p>返回指定状态码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location /wront/url &#123;</div><div class="line">    <span class="built_in">return</span> 404;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>return指令的第一个参数是<code>响应状态码</code>，第二个可选参数可以是重定向的RUL(for code 301,302,303 and 307)或者一段文本，如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location /permanently/moved/url &#123;</div><div class="line">    <span class="built_in">return</span> 301 http://www.example.com/moved/url;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="Rewrite"><a href="#Rewrite" class="headerlink" title="Rewrite"></a>Rewrite</h2><p>一个请求的RUI可以被rewrite指令重写多次。<br>rewrite指令有两个必选参数和一个可选参数：</p>
