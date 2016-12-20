@@ -6,57 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.linuxer.vip">
-  <title>Python基础之开发环境-安装 | 王绍辉的博客</title>
+  <title>Nginx配置 | 王绍辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="pyenv是什么？简单的Python版本管理器
-pyenv有哪些功能？
-
-安装Python解释器
-管理Python版本
-管理Python虚拟环境（后续会有介绍什么是Python虚拟环境，待续…）
-……
+  <meta name="description" content="nginx配置Locationnginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。
+语法：location [=|^~|~|`*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
+匹配类型：
 
 
-安装pyenv系统环境:CentOS 7
-
-pyenv项目地址
-
-安装依赖 git、gcc、make、patch、zlib-devel、gdbm-devel、openssl-devel、sqli">
+prefix strings（前缀字符串匹配）
+regular expressions（正则表达式匹">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python基础之开发环境-安装">
-<meta property="og:url" content="http://www.linuxer.vip/2016/11/18/Python基础之开发环境-安装/index.html">
+<meta property="og:title" content="Nginx配置">
+<meta property="og:url" content="http://www.linuxer.vip/2016/12/20/Nginx配置/index.html">
 <meta property="og:site_name" content="王绍辉的博客">
-<meta property="og:description" content="pyenv是什么？简单的Python版本管理器
-pyenv有哪些功能？
-
-安装Python解释器
-管理Python版本
-管理Python虚拟环境（后续会有介绍什么是Python虚拟环境，待续…）
-……
+<meta property="og:description" content="nginx配置Locationnginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。
+语法：location [=|^~|~|`*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
+匹配类型：
 
 
-安装pyenv系统环境:CentOS 7
-
-pyenv项目地址
-
-安装依赖 git、gcc、make、patch、zlib-devel、gdbm-devel、openssl-devel、sqli">
-<meta property="og:updated_time" content="2016-12-15T15:27:49.999Z">
+prefix strings（前缀字符串匹配）
+regular expressions（正则表达式匹">
+<meta property="og:updated_time" content="2016-12-20T13:03:58.078Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python基础之开发环境-安装">
-<meta name="twitter:description" content="pyenv是什么？简单的Python版本管理器
-pyenv有哪些功能？
-
-安装Python解释器
-管理Python版本
-管理Python虚拟环境（后续会有介绍什么是Python虚拟环境，待续…）
-……
+<meta name="twitter:title" content="Nginx配置">
+<meta name="twitter:description" content="nginx配置Locationnginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。
+语法：location [=|^~|~|`*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
+匹配类型：
 
 
-安装pyenv系统环境:CentOS 7
-
-pyenv项目地址
-
-安装依赖 git、gcc、make、patch、zlib-devel、gdbm-devel、openssl-devel、sqli">
+prefix strings（前缀字符串匹配）
+regular expressions（正则表达式匹">
   
     <link rel="alternative" href="/atom.xml" title="王绍辉的博客" type="application/atom+xml">
   
@@ -173,81 +152,57 @@ pyenv项目地址
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Python基础之开发环境-安装" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Nginx配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python基础之开发环境-安装
+      Nginx配置
     </h1>
   
 
-        <a href="/2016/11/18/Python基础之开发环境-安装/" class="archive-article-date">
-  	<time datetime="2016-11-18T13:55:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-18</time>
+        <a href="/2016/12/20/Nginx配置/" class="archive-article-date">
+  	<time datetime="2016-12-20T13:02:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-20</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="pyenv是什么？"><a href="#pyenv是什么？" class="headerlink" title="pyenv是什么？"></a>pyenv是什么？</h2><p>简单的Python版本管理器</p>
-<h2 id="pyenv有哪些功能？"><a href="#pyenv有哪些功能？" class="headerlink" title="pyenv有哪些功能？"></a>pyenv有哪些功能？</h2><blockquote>
+        <h1 id="nginx配置"><a href="#nginx配置" class="headerlink" title="nginx配置"></a>nginx配置</h1><h2 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h2><p>nginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。</p>
+<p>语法：location [=|^~|~|`*] uri {…}<br>使用位置：server，location<br>意义：匹配http请求报文URI，执行响应的配置</p>
+<p>匹配类型：</p>
+<blockquote>
 <ul>
-<li>安装Python解释器</li>
-<li>管理Python版本</li>
-<li>管理Python虚拟环境（后续会有介绍什么是Python虚拟环境，待续…）</li>
-<li>……</li>
+<li>prefix strings（前缀字符串匹配）</li>
+<li>regular expressions（正则表达式匹配）</li>
 </ul>
 </blockquote>
-<h2 id="安装pyenv"><a href="#安装pyenv" class="headerlink" title="安装pyenv"></a>安装pyenv</h2><p><strong>系统环境:CentOS 7</strong></p>
-<ol>
-<li><p><a href="https://github.com/yyuu/pyenv" target="_blank" rel="external">pyenv</a>项目地址</p>
-</li>
-<li><p>安装依赖<br> git、gcc、make、patch、zlib-devel、gdbm-devel、openssl-devel、sqlite-devel、readline-devel、bzip2-devel</p>
-</li>
-<li><p>使用<code>pyenv-install</code>安装pyenv</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置环境变量<br> 添加以下内容至<code>~/.bash_profile</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export PATH=&quot;/root/.pyenv/bin:$PATH&quot;</div><div class="line">eval &quot;$(pyenv init -)&quot;</div><div class="line">eval &quot;$(pyenv virtualenv-init -)&quot;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>至此，pyenv安装完成。</p>
+<p><code>`：前缀字符串匹配，优先级最低</code>=<code>：表示前缀字符串精确匹配URI，优先级最高</code>^~<code>：表示前缀字符串匹配URI前半部分（URI以xxx字符串开头）</code>~<code>：区分大小写的正则匹配</code>~*`：不区分大小写的正则匹配</p>
+<p>为了找到最佳匹配的URI，nginx首先比较<code>前缀字符串</code>的location，然后查询<code>正则表达式</code>的location。在<code>前缀字符串</code>中选择最长最佳的匹配。</p>
+<p>location处理逻辑：</p>
+<blockquote>
+<p>1.用URI测试所有的prefix string;<br>2.URI精确匹配到<code>=</code>定义的location，使用这个location，停止搜索<br>3.匹配最长prefix string，如果这个最长prefix string带有<code>^~</code>修饰符，使用这个location，停止搜索，否则进行#4步操作<br>4.存储这个最长匹配prefix string<br>5.然后匹配正则表达式<br>6.匹配到第一条正则表达式，使用这个location，停止搜索；<br>7.没有匹配到正则表达式，使用#4步存储的prefix string的location。</p>
+</blockquote>
+<p><code>=</code> 的典型用例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location = / &#123;</div><div class="line">    ....</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果请求<code>/</code>非常频繁，使用上面的配置会加快处理速度，因为执行完#2步就完成了匹配。</p>
+<h2 id="Return"><a href="#Return" class="headerlink" title="Return"></a>Return</h2><p>返回指定状态码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location /wront/url &#123;</div><div class="line">    <span class="built_in">return</span> 404;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>return指令的第一个参数是<code>响应状态码</code>，第二个可选参数可以是重定向的RUL(for code 301,302,303 and 307)或者一段文本，如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location /permanently/moved/url &#123;</div><div class="line">    <span class="built_in">return</span> 301 http://www.example.com/moved/url;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Rewrite"><a href="#Rewrite" class="headerlink" title="Rewrite"></a>Rewrite</h2><p>一个请求的RUI可以被rewrite指令重写多次。<br>rewrite指令有两个必选参数和一个可选参数：</p>
+<blockquote>
+<ul>
+<li>regular expression（必选，匹配URI的正则表达式）</li>
+<li>第二个必选参数是URI，用来替代匹配到的URI</li>
+<li>可选参数是一个标志，此标志可以停止rewrite指令的下一步操作或者发送一个redirect状态码301或302</li>
+</ul>
+</blockquote>
+<p>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    ...</div><div class="line">    rewrite ^(/download/.*)/media/(.*)\..*$ <span class="variable">$1</span>/mp3/<span class="variable">$2</span>.mp3 last;</div><div class="line">    rewrite ^(/download/.*)/audio/(.*)\..*$ <span class="variable">$1</span>/mp3/<span class="variable">$2</span>.ra  last;</div><div class="line">    <span class="built_in">return</span>  403;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>根据上面的举例，/download/some/media/file被重写为/download/some/mp3/file.mp3，而后使用/download/some/mp3/file.mp3重新发起请求，第二个rewrite和return被跳过。/download/some/audio/file被重写为/download/some/mp3/file.ra，，而后使用/download/some/mp3/file.ra重新发起请求，return被跳过。如果URI没有被任何rewrite规则匹配到，nginx将返回403错误。</p>
+<p>rewrite标志：<br><code>空</code>:一旦被当前规则匹配并重写后，继续检查后续其它的rewrite规则，直至最后一条，而后使用重写后的URI重新发起请求<br><code>last</code>：一旦被当前规则匹配并重写后，立即停止检查后续其它的rewrite规则，而后通过重写后的URI重新发起请求<br><code>break</code>：一旦被当前规则匹配并重写后，立即停止检查后续其它的rewrite规则，而后继续由nginx进行后续操作<br><code>redirect</code>：返回302临时重定向状态码<br><code>permanent</code>：返回301永久重定向状态码</p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>多谢官人赏赐*^_^*<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/wxpay.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -255,7 +210,7 @@ pyenv项目地址
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
 	</div>
 
       
@@ -308,7 +263,7 @@ pyenv项目地址
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.linuxer.vip/2016/11/18/Python基础之开发环境-安装/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.linuxer.vip/2016/12/20/Nginx配置/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -322,15 +277,11 @@ pyenv项目地址
   
 <nav id="article-nav">
   
-    <a href="/2016/12/14/Python基础之开发环境-使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Python基础之开发环境-使用
-        
-      </div>
-    </a>
   
+    <a href="/2016/12/14/1-2运算符/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">1.2运算符</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -341,7 +292,7 @@ pyenv项目地址
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Python基础之开发环境-安装" data-title="Python基础之开发环境-安装" data-url="http://www.linuxer.vip/2016/11/18/Python基础之开发环境-安装/"></div>
+	<div class="ds-thread" data-thread-key="Nginx配置" data-title="Nginx配置" data-url="http://www.linuxer.vip/2016/12/20/Nginx配置/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
