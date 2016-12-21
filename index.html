@@ -151,7 +151,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h2><p>nginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。</p>
-<p>语法：location [=|^~|~|`*] uri {…}<br>使用位置：server，location<br>意义：匹配http请求报文URI，执行响应的配置</p>
+<p>语法：location [=|^~|~|~*] uri {…}<br>使用位置：server，location<br>意义：匹配http请求报文URI，执行响应的配置</p>
 <p>匹配类型：</p>
 <blockquote>
 <ul>
@@ -159,7 +159,11 @@
 <li>regular expressions（正则表达式匹配）</li>
 </ul>
 </blockquote>
-<p><code>`：前缀字符串匹配，优先级最低</code>=<code>：表示前缀字符串精确匹配URI，优先级最高</code>^~<code>：表示前缀字符串匹配URI前半部分（URI以xxx字符串开头）</code>~<code>：区分大小写的正则匹配</code>~*`：不区分大小写的正则匹配</p>
+<p><code> </code>：前缀字符串匹配，优先级最低</p>
+<p><code>=</code>：表示前缀字符串精确匹配URI，优先级最高</p>
+<p><code>^~</code>：表示前缀字符串匹配URI前半部分（URI以xxx字符串开头）</p>
+<p><code>~</code>：区分大小写的正则匹配</p>
+<p><code>~*</code>：不区分大小写的正则匹配</p>
 <p>为了找到最佳匹配的URI，nginx首先比较<code>前缀字符串</code>的location，然后查询<code>正则表达式</code>的location。在<code>前缀字符串</code>中选择最长最佳的匹配。</p>
 <p>location处理逻辑：</p>
 <blockquote>

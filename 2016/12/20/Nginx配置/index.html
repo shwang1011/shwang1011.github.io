@@ -9,7 +9,7 @@
   <title>Nginx配置 | 王绍辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Locationnginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。
-语法：location [=|^~|~|`*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
+语法：location [=|^~|~|~*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
 匹配类型：
 
 
@@ -17,13 +17,13 @@ prefix strings（前缀字符串匹配）
 regular expressions（正则表达式匹配）
 
 
-`：">
+ ：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx配置">
 <meta property="og:url" content="http://www.linuxer.vip/2016/12/20/Nginx配置/index.html">
 <meta property="og:site_name" content="王绍辉的博客">
 <meta property="og:description" content="Locationnginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。
-语法：location [=|^~|~|`*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
+语法：location [=|^~|~|~*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
 匹配类型：
 
 
@@ -31,12 +31,12 @@ prefix strings（前缀字符串匹配）
 regular expressions（正则表达式匹配）
 
 
-`：">
-<meta property="og:updated_time" content="2016-12-20T13:05:48.188Z">
+ ：">
+<meta property="og:updated_time" content="2016-12-21T12:47:48.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx配置">
 <meta name="twitter:description" content="Locationnginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。
-语法：location [=|^~|~|`*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
+语法：location [=|^~|~|~*] uri {…}使用位置：server，location意义：匹配http请求报文URI，执行响应的配置
 匹配类型：
 
 
@@ -44,7 +44,7 @@ prefix strings（前缀字符串匹配）
 regular expressions（正则表达式匹配）
 
 
-`：">
+ ：">
   
     <link rel="alternative" href="/atom.xml" title="王绍辉的博客" type="application/atom+xml">
   
@@ -180,7 +180,7 @@ regular expressions（正则表达式匹配）
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h2><p>nginx可以使用location指令根据请求报文URI将请求转发至其他主机或者本地主机的其他位置。</p>
-<p>语法：location [=|^~|~|`*] uri {…}<br>使用位置：server，location<br>意义：匹配http请求报文URI，执行响应的配置</p>
+<p>语法：location [=|^~|~|~*] uri {…}<br>使用位置：server，location<br>意义：匹配http请求报文URI，执行响应的配置</p>
 <p>匹配类型：</p>
 <blockquote>
 <ul>
@@ -188,7 +188,11 @@ regular expressions（正则表达式匹配）
 <li>regular expressions（正则表达式匹配）</li>
 </ul>
 </blockquote>
-<p><code>`：前缀字符串匹配，优先级最低</code>=<code>：表示前缀字符串精确匹配URI，优先级最高</code>^~<code>：表示前缀字符串匹配URI前半部分（URI以xxx字符串开头）</code>~<code>：区分大小写的正则匹配</code>~*`：不区分大小写的正则匹配</p>
+<p><code> </code>：前缀字符串匹配，优先级最低</p>
+<p><code>=</code>：表示前缀字符串精确匹配URI，优先级最高</p>
+<p><code>^~</code>：表示前缀字符串匹配URI前半部分（URI以xxx字符串开头）</p>
+<p><code>~</code>：区分大小写的正则匹配</p>
+<p><code>~*</code>：不区分大小写的正则匹配</p>
 <p>为了找到最佳匹配的URI，nginx首先比较<code>前缀字符串</code>的location，然后查询<code>正则表达式</code>的location。在<code>前缀字符串</code>中选择最长最佳的匹配。</p>
 <p>location处理逻辑：</p>
 <blockquote>
