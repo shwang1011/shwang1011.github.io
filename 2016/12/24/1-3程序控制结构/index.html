@@ -35,7 +35,9 @@ Python中的布尔测试：
 <meta property="og:image" content="http://www.linuxer.vip/images/if.png">
 <meta property="og:image" content="http://www.linuxer.vip/images/if-else.png">
 <meta property="og:image" content="http://www.linuxer.vip/images/if-elif-else.png">
-<meta property="og:updated_time" content="2016-12-25T01:55:10.626Z">
+<meta property="og:image" content="http://www.linuxer.vip/images/while.png">
+<meta property="og:image" content="http://www.linuxer.vip/images/for.png">
+<meta property="og:updated_time" content="2016-12-25T02:25:40.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.3程序控制结构">
 <meta name="twitter:description" content="Python的程序控制结构：
@@ -215,7 +217,26 @@ Python中的布尔测试：
 <p><img src="http://www.linuxer.vip/images/if-elif-else.png" alt=""></p>
 <p>例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">a = <span class="number">4</span></div><div class="line">b = <span class="number">5</span></div><div class="line"><span class="keyword">if</span> a &gt; b:</div><div class="line">    print(<span class="string">'a larger than b'</span>)</div><div class="line"><span class="keyword">elif</span> a == b:</div><div class="line">    print(<span class="string">'a equal to b'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    print(<span class="string">'a less than b'</span>)</div><div class="line">输出：a less than b</div></pre></td></tr></table></figure>
-<p><code>注意：</code><br>分支结构永远只有一个分支会被执行。</p>
+<p><code>注意：</code></p>
+<blockquote>
+<p>  1.分支结构永远只有一个分支会被执行<br>  2.<code>condition</code>有隐式转换：bool(condition)</p>
+</blockquote>
+<h2 id="1-3-3-循环结构"><a href="#1-3-3-循环结构" class="headerlink" title="1.3.3 循环结构"></a>1.3.3 循环结构</h2><p><strong>1.3.3.1 while循环</strong></p>
+<p>语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> condition:</div><div class="line">    block</div><div class="line">main</div></pre></td></tr></table></figure>
+<p>流程：</p>
+<p><img src="http://www.linuxer.vip/images/while.png" alt=""></p>
+<p>例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">a = <span class="number">0</span></div><div class="line"><span class="keyword">while</span> a &lt;= <span class="number">5</span>:</div><div class="line">    print(<span class="string">'a = &#123;0&#125;'</span>.format(a))</div><div class="line">    a += <span class="number">1</span></div><div class="line">输出：</div><div class="line">    a = <span class="number">0</span></div><div class="line">    a = <span class="number">1</span></div><div class="line">    a = <span class="number">2</span></div><div class="line">    a = <span class="number">3</span></div><div class="line">    a = <span class="number">4</span></div><div class="line">    a = <span class="number">5</span></div></pre></td></tr></table></figure>
+<p><code>注意</code>：通常在while循环中，循环体内需要修改condition，以使得condition为假。</p>
+<p><strong>1.3.3.2 for循环</strong></p>
+<p>语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> element <span class="keyword">in</span> interator:</div><div class="line">    block</div></pre></td></tr></table></figure>
+<p>流程：</p>
+<p><img src="http://www.linuxer.vip/images/for.png" alt=""></p>
+<p>例:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">6</span>):</div><div class="line">    print(<span class="string">'i = &#123;0&#125;'</span>.format(i))</div><div class="line">输出：  </div><div class="line">    i = <span class="number">0</span></div><div class="line">    i = <span class="number">1</span></div><div class="line">    i = <span class="number">2</span></div><div class="line">    i = <span class="number">3</span></div><div class="line">    i = <span class="number">4</span></div><div class="line">    i = <span class="number">5</span></div></pre></td></tr></table></figure>
+<p><code>注意</code>：循环体内不要修改interator，否则会遇到不可预料的结果。</p>
 
       
 
